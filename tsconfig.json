@@ -6,11 +6,52 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "allowJs": true,
     "target": "es2017",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
-    "skipLibCheck": true
-  }
+    "noLib": false,
+    "noImplicitAny": false,
+    "typeRoots": [
+      "node_modules/@types",
+      "types"
+    ],
+    "paths": {
+      "@auth": [
+        "src/auth"
+      ],
+      "@config": [
+        "src/config"
+      ],
+      "@environments": [
+        "src/environments"
+      ],
+      "@generator": [
+        "src/generator/graphql.schema"
+      ],
+      "@utils": [
+        "src/utils"
+      ],
+      "@const": [
+        "src/@const"
+      ]
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "include": [
+    "src/**/*.ts",
+    "*.ts",
+    "migrations"
+  ],
+  "compileOnSave": false,
+  "exclude": [
+    "node_modules",
+    "coverage",
+    "document",
+    "dist",
+    "backup",
+    "**/*.spec.ts"
+  ]
 }

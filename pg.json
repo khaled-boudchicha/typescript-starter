@@ -1,0 +1,15 @@
+{
+  "client": "postgres",
+  "connection": {
+    "database": "clinic6-pharmacy",
+    "user": "postgres",
+    "password": "Admin123"
+  },
+  "folder": "src/@types",
+  "interfaceNameFormat": "${table}Model",
+  "tableNameCasing": "pascal",
+  "excludedTables": [
+    "$knex_migrations",
+    "$knex_migrations_lock"
+  ]
+}
